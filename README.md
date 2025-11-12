@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧱 Shree Hardev Packers — Company Website
 
-## Getting Started
+A modern, responsive website for **Shree Hardev Packers**, built with **Next.js**, **Tailwind CSS**, and **Framer Motion** for smooth animations.  
+It highlights services, products, testimonials, about us, and contact details — optimized for speed, SEO, and user experience.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- ⚡ **Next.js 14** — server-side rendering & static generation
+- 🎨 **Tailwind CSS** — clean, modern responsive UI
+- 🎞 **Framer Motion** — smooth animations and transitions
+- 📱 **Fully Responsive** — perfect across all devices
+- 🗺 **Google Maps Embed** — interactive business location
+- 📩 **EmailJS Integration** — direct email submission from contact form
+- 🧭 **Dynamic Navigation** — smooth scrolling and route transitions
+
+---
+
+## 🧩 Project Structure
+
+├── app/
+│ ├── page.jsx # Homepage
+│ ├── about/page.jsx # About Us page
+│ ├── components/
+│ │ ├── Navbar.jsx
+│ │ ├── Footer.jsx
+│ │ ├── ContactForm.jsx
+│ │ ├── About.jsx
+│ │ ├── Products.jsx
+│ │ └── ...other sections
+│ ├── styles/
+│ │ └── globals.css
+├── public/
+│ ├── logo.png
+│ └── favicon.ico
+├── package.json
+├── README.md
+└── next.config.js
+
+yaml
+Copy code
+
+---
+
+## 🛠️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/rishabhrthr001/Paperbag-website.git
+cd Paperbag-website
+```
+
+```bash
+2️⃣ Install dependencies
+npm install
+```
+
+3️⃣ Run in development mode
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then visit 👉 http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+⚙️ Build for Production
+To build the optimized production version:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+To serve the production build locally:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🌍 Deployment
+🔹 Deploy on Vercel (Recommended)
+Easiest method for Next.js projects:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm i -g vercel
+vercel
+```
 
-## Deploy on Vercel
+🔹 Self-Hosting / VPS Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install
+npm run build
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🧰 Environment Variables
+For EmailJS integration:
+
+```bash
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+These should be placed inside a .env.local file at the root of your project.
+
+🗺 Google Maps Embed
+The contact section uses an interactive map embed:
+
+```bash
+<iframe
+  src="https://www.google.com/maps/embed?pb=!4v1762977521304!6m8!1m7!1s3W_U-4iEaTIyi6Th5RhBHA!2m2!1d28.65863599500068!2d77.13670727183846!3f329.329915155184!4f4.7564731993847715!5f0.7820865974627469"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+```
+
+🧑‍💻 Tech Stack
+Next.js 14
+
+React 18
+
+Tailwind CSS
+
+Framer Motion
+
+Lucide React Icons
+
+EmailJS
+
+💬 Author
+Rishabh Rathore (Golu)
+🧑‍💻 Web3 & Full-Stack Developer
+📧 rishabh.rthr001@gmail.com
+🌐 https://github.com/rishabhrthr001
