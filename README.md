@@ -17,29 +17,7 @@ It highlights services, products, testimonials, about us, and contact details �
 
 ---
 
-## 🧩 Project Structure
 
-├── app/
-│ ├── page.jsx # Homepage
-│ ├── about/page.jsx # About Us page
-│ ├── components/
-│ │ ├── Navbar.jsx
-│ │ ├── Footer.jsx
-│ │ ├── ContactForm.jsx
-│ │ ├── About.jsx
-│ │ ├── Products.jsx
-│ │ └── ...other sections
-│ ├── styles/
-│ │ └── globals.css
-├── public/
-│ ├── logo.png
-│ └── favicon.ico
-├── package.json
-├── README.md
-└── next.config.js
-
-yaml
-Copy code
 
 ---
 
@@ -52,8 +30,9 @@ git clone https://github.com/rishabhrthr001/Paperbag-website.git
 cd Paperbag-website
 ```
 
-```bash
+
 2️⃣ Install dependencies
+```bash
 npm install
 ```
 
@@ -139,3 +118,8 @@ Rishabh Rathore (Golu)
 🧑‍💻 Web3 & Full-Stack Developer
 📧 rishabh.rthr001@gmail.com
 🌐 https://github.com/rishabhrthr001
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-EF4444?style=for-the-badge&logo=framer&logoColor=white)
+
