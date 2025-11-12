@@ -11,18 +11,18 @@ export default function StationeryPage() {
   const [zoom, setZoom] = useState(1);
 
   const images = [
-    "/products/stationery/stationery1.jpg",
-    "/products/stationery/stationery2.jpg",
-    "/products/stationery/stationery3.jpg",
-    "/products/stationery/stationery4.jpg",
-    "/products/stationery/stationery5.jpg",
-    "/products/stationery/stationery6.jpg",
-    "/products/stationery/stationery7.jpg",
-    "/products/stationery/stationery8.jpg",
-    "/products/stationery/stationery9.jpg",
-    "/products/stationery/stationery10.jpg",
-    "/products/stationery/stationery11.jpg",
-    "/products/stationery/stationery12.jpg",
+    "/products/stationery/Stationery1.jpg",
+    "/products/stationery/Stationery2.jpg",
+    "/products/stationery/Stationery3.jpg",
+    "/products/stationery/Stationery4.jpg",
+    "/products/stationery/Stationery5.jpg",
+    "/products/stationery/Stationery6.jpg",
+    "/products/stationery/Stationery7.jpg",
+    "/products/stationery/Stationery8.jpg",
+    "/products/stationery/Stationery9.jpg",
+    "/products/stationery/Stationery10.jpg",
+    "/products/stationery/Stationery11.jpg",
+    "/products/stationery/Stationery12.jpg",
   ];
 
   const handleZoomIn = () => setZoom((prev) => Math.min(prev + 0.25, 3));

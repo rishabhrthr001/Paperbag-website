@@ -72,9 +72,9 @@ const products = [
     link: "/stationery",
     description: "Professional office stationery with custom branding.",
     images: [
-      "products/stationery/stationery1.jpg",
-      "products/stationery/stationery8.jpg",
-      "products/stationery/stationery7.jpg",
+      "products/stationery/Stationery1.jpg",
+      "products/stationery/Stationery8.jpg",
+      "products/stationery/Stationery7.jpg",
     ],
     price: "On Quotation",
     delivery: "3-5 days",
