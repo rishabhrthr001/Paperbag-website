@@ -1,5 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const testimonials = [
   {
@@ -65,6 +66,27 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const [index, setIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Auto-advance only on mobile
+  useEffect(() => {
+    if (isMobile) {
+      const interval = setInterval(() => {
+        setIndex((prev) => (prev + 1) % testimonials.length);
+      }, 3000); // 3 seconds
+      return () => clearInterval(interval);
+    }
+  }, [isMobile]);
+
   return (
     <section
       id="testimonies"
@@ -74,34 +96,76 @@ export default function Testimonials() {
         What Our Clients Say
       </h2>
 
-      <div className="relative w-full max-w-6xl overflow-hidden">
-        <motion.div
-          className="flex gap-8"
-          animate={{
-            x: ["0%", "-100%"],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 50,
-            ease: "linear",
-          }}
-        >
-          {[...testimonials, ...testimonials].map((t, i) => (
-            <div
-              key={i}
-              className="min-w-[300px] max-w-sm bg-white shadow-lg rounded-xl p-6 flex-shrink-0"
-            >
-              <p className="text-gray-700 italic mb-4">“{t.message}”</p>
-              <div className="text-[#795548] font-semibold">{t.name}</div>
-              <div className="text-sm text-gray-500">{t.company}</div>
-            </div>
-          ))}
-        </motion.div>
-      </div>
+      {/* Desktop - Continuous Scroll */}
+      {!isMobile && (
+        <div className="relative w-full max-w-6xl overflow-hidden">
+          <motion.div
+            className="flex gap-8"
+            animate={{
+              x: ["0%", "-100%"],
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 50,
+              ease: "linear",
+            }}
+          >
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <div
+                key={i}
+                className="min-w-[300px] max-w-sm bg-white shadow-lg rounded-xl p-6 flex-shrink-0"
+              >
+                <p className="text-gray-700 italic mb-4">“{t.message}”</p>
+                <div className="text-[#795548] font-semibold">{t.name}</div>
+                <div className="text-sm text-gray-500">{t.company}</div>
+              </div>
+            ))}
+          </motion.div>
 
-      {/* Gradient edges for smooth scrolling */}
-      <div className="pointer-events-none absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-[#fff8f0] to-transparent"></div>
-      <div className="pointer-events-none absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-[#fff8f0] to-transparent"></div>
+          {/* Fade edges (only desktop) */}
+          <div className="pointer-events-none absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-[#fff8f0] to-transparent"></div>
+          <div className="pointer-events-none absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-[#fff8f0] to-transparent"></div>
+        </div>
+      )}
+
+      {/* Mobile - One at a time */}
+      {isMobile && (
+        <div className="relative w-full max-w-xs overflow-hidden px-6">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.4 }}
+              className="bg-white shadow-lg rounded-xl p-6 text-center cursor-grab active:cursor-grabbing"
+            >
+              <p className="text-gray-700 italic mb-4">
+                “{testimonials[index].message}”
+              </p>
+              <div className="text-[#795548] font-semibold">
+                {testimonials[index].name}
+              </div>
+              <div className="text-sm text-gray-500">
+                {testimonials[index].company}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-4">
+            {testimonials.map((_, i) => (
+              <div
+                key={i}
+                onClick={() => setIndex(i)}
+                className={`w-2 h-2 rounded-full cursor-pointer transition-all ${
+                  i === index ? "bg-[#795548]" : "bg-gray-300"
+                }`}
+              ></div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

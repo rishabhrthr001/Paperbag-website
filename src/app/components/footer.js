@@ -127,9 +127,24 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="border-t border-[#4caf50] pt-4 text-center text-sm">
-        © {new Date().getFullYear()} SHREE HARDEV PACKERS. All Rights Reserved.
+      <div className="border-t border-[#4caf50] pt-4 text-center text-sm space-y-2">
+        <p>
+          © {new Date().getFullYear()} SHREE HARDEV PACKERS. All Rights
+          Reserved.
+        </p>
+
+        {/* Signature Line */}
+        <p className="text-white">
+          Made with <span className="text-red-500">❤️</span> by{" "}
+          <a
+            href="https://devrishabh.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold  hover:text-[#4caf50] transition-colors"
+          >
+            <span className="text-green-600">Rishabh Rathore</span>
+          </a>
+        </p>
       </div>
     </footer>
   );
