@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Shree Hardev Packers",
+  title: "Shri Hardev Packers",
   description: "Premium printing and packaging solutions",
   icons: {
     icon: "/favicon.png",
