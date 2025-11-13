@@ -49,7 +49,7 @@ export default function Footer() {
           </p>
           <p className="flex items-center gap-2">
             <MapPin size={18} />
-            WZ-2D/2, 1st Floor, Basai Darapur, New Delhi-110059
+            WZ-2D/2, 1st Floor, Basai Darapur, New Delhi-110015
           </p>
 
           {/* Quick Links for Mobile */}
