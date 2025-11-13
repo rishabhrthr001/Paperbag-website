@@ -26,13 +26,16 @@ export default function Navbar() {
   ];
 
   const handleClick = (item) => {
+    setMobileOpen(false);
+
     if (item.isPage) {
       router.push(item.href);
     } else {
-      const section = document.querySelector(item.href);
-      section?.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        const section = document.querySelector(item.href);
+        section?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
     }
-    setMobileOpen(false);
   };
 
   return (
