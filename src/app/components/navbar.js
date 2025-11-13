@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <img
             src="/logo.png"
-            alt="SHREE HARDEV PACKERS"
+            alt="SHRI HARDEV PACKERS"
             className="w-16 h-16 object-contain cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           />

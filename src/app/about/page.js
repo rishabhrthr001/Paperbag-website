@@ -25,7 +25,7 @@ export default function About() {
         className="max-w-5xl mx-auto text-center mb-16 text-gray-700 space-y-4"
       >
         <p>
-          <strong>Shree Hardev Packers</strong> has been a trusted name in
+          <strong>Shri Hardev Packers</strong> has been a trusted name in
           professional packing and delivery services since <strong>2010</strong>
           . With over a decade of expertise, we specialize in ensuring your
           goods reach safely, on time, and in pristine condition.
@@ -81,7 +81,7 @@ export default function About() {
       >
         <h2 className="text-3xl font-bold text-[#5d4037] mb-4">Our Journey</h2>
         <p>
-          Started in 2010 with a small team and a big vision, Shree Hardev
+          Started in 2010 with a small team and a big vision, Shri Hardev
           Packers has grown into a full-service packing and delivery company
           serving Delhi and beyond. Our dedication to quality and customer
           satisfaction has earned us long-term relationships with countless

@@ -17,13 +17,13 @@ export default function Footer() {
         <div className="flex items-center">
           <img
             src="/logo.png"
-            alt="SHREE HARDEV PACKERS"
+            alt="SHRI HARDEV PACKERS"
             className="w-16 h-16 object-contain"
           />
         </div>
 
         <h2 className="text-2xl font-semibold text-center">
-          SHREE HARDEV PACKERS
+          SHRI HARDEV PACKERS
         </h2>
       </div>
 
@@ -129,8 +129,7 @@ export default function Footer() {
 
       <div className="border-t border-[#4caf50] pt-4 text-center text-sm space-y-2">
         <p>
-          © {new Date().getFullYear()} SHREE HARDEV PACKERS. All Rights
-          Reserved.
+          © {new Date().getFullYear()} SHRI HARDEV PACKERS. All Rights Reserved.
         </p>
 
         {/* Signature Line */}
